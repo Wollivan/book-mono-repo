@@ -1,8 +1,9 @@
 const app = document.getElementById("app");
+const API_URL = "https://book-mono-repo-server.onrender.com";
 
 // make a fetch to our server
 async function getBooks() {
-  const response = await fetch("http://localhost:8080/books");
+  const response = await fetch(`${API_URL}/books`);
   const data = await response.json();
   console.log(data);
 
